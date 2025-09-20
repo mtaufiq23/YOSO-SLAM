@@ -11,11 +11,7 @@ if you use YOSO-SLAM in an academic work, please cite:
   title        = {YOSO-SLAM: A Real-time Object Visual SLAM for Dynamic Scenes with Semantic 3-Dimensional Mapping},
   author       = {Mohd Taufiq Muslim, Hazlina Selamat and Anas Aburaya},
   year         = {2025},
-<<<<<<< HEAD
   note         = {Manuscript under review. Code available at \url{https://github.com/mtaufiq23/YOSO-SLAM}}
-=======
-  note         = {Manuscript under review. Code available at \url{https://github.com/your-username/yoso-slam}}
->>>>>>> bff3f46 (Upload files)
 }
 ```
 
@@ -44,11 +40,7 @@ Required for point cloud generation and manipulation. Download and install instr
 #### Octomap
 Required for generating 3D map based on octree. Download and install instructions https://github.com/OctoMap/octomap. Tested with 1.9.8.
 
-<<<<<<< HEAD
 #### libtorch (Included in Thirdparty folder)
-=======
-#### libtorch
->>>>>>> bff3f46 (Upload files)
 Required for torchscript implementation in c++. Tested with 2.0.1+cpu.
 
 
