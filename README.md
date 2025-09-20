@@ -40,8 +40,8 @@ Required for point cloud generation and manipulation. Download and install instr
 #### Octomap
 Required for generating 3D map based on octree. Download and install instructions https://github.com/OctoMap/octomap. Tested with 1.9.8.
 
-#### libtorch (Included in Thirdparty folder)
-Required for torchscript implementation in c++. Tested with 2.0.1+cpu.
+#### libtorch (Download and extract it into the Thirdparty folder)
+Required for torchscript implementation in c++. Download can be found at: https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-2.0.1%2Bcpu.zip. Tested with 2.0.1+cpu.
 
 
 ### 2. Building YOSO-SLAM library and examples
