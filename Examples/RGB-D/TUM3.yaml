@@ -1,0 +1,132 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera1.fx: 535.4
+Camera1.fy: 539.2
+Camera1.cx: 320.1
+Camera1.cy: 247.6
+
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 30
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 40.0
+
+# Close/Far threshold. Baseline times.
+Stereo.ThDepth: 40.0
+Stereo.b: 0.0747
+
+# Depth map values factor
+RGBD.DepthMapFactor: 5000.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+
+
+#--------------------------------------------------------------------------------------------
+# YOLOv8 Object detection Parameter. (Setting other detail paramaters in Config.ini inside yolo_data folder)
+#--------------------------------------------------------------------------------------------
+YoloDetect.Run: 1
+
+
+#--------------------------------------------------------------------------------------------
+# OctoMap Parameters
+#--------------------------------------------------------------------------------------------
+OctoMap.Run: 1
+OctoMap.Resolution: 0.05
+OctoMap.meank: 50
+OctoMap.thresh: 2.0
+OctoMap.PlotKFpcl: 1            #Turn on point cloud
+OctoMap.SetLeafSize: 0.05
+OctoMap.ProbabilityTh: 0.8
+OctoMap.SetClampingThresMin: 0.12
+OctoMap.SetClampingThresMax: 0.97
+OctoMap.SetProbHit: 0.7
+OctoMap.SetProbMiss: 0.4
+OctoMap.SetDepthLevel: 16
+OctoMap.MinPclDepthRange: 0.5
+OctoMap.MaxPclDepthRange: 3.00
+OctoMap.MinVerticalRange: -3.00
+OctoMap.MaxVerticalRange: 3.00
+OctoMap.FilterGndData: 1
+OctoMap.EnableLoopClosing: 1
+OctoMap.EnableMapMerging: 1
+OctoMap.FileSavePath: "/home/mtaufiq23/Desktop/SLAM/Analysis/Yolo_RGBD/OctomapResults/rgbd_octomap.ot"
+OctoMap.ManualFileSavePath: "/home/mtaufiq23/Desktop/SLAM/Analysis/Yolo_RGBD/OctomapResults/mrgbd_octomap.ot"
+OctoMap.BackupFileSavePath: "/home/mtaufiq23/Desktop/SLAM/Analysis/Yolo_RGBD/OctomapResults/brgbd_octomap.ot"
+OctoMap.DrawObjects: 1      #Draw detected static objects (cuboid)
+
+
+#--------------------------------------------------------------------------------------------
+# Atlas Parameters
+#--------------------------------------------------------------------------------------------
+# Added button save in Viewer
+
+
+#--------------------------------------------------------------------------------------------
+# Semantic same objects tolerence (Set how much distance (current object) to be considered as same the object (in database) 
+# Hitting over the value will label as different object
+# Tolerence ~ size of object (m)
+#--------------------------------------------------------------------------------------------
+Semantic.person: 0.6
+Semantic.bottle: 0.24
+Semantic.chair: 1.1
+Semantic.pottedplant: 0.6
+Semantic.diningtable: 0.6
+Semantic.tvmonitor: 0.75
+Semantic.laptop: 0.6
+Semantic.mouse: 0.275
+Semantic.keyboard: 0.54
+Semantic.book: 0.6
+Semantic.teddy_bear: 0.7
+
+
